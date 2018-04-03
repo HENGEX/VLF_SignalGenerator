@@ -9,9 +9,13 @@
 <par>We instruct users to clone the whole genproductions from git and work there. On a lxplus machine (not in a release area), you can do the following:</par>
 
 ```bash
+git@github.com:casfisica/VLF_SignalGenerator.git
+cd VLF_SignalGenerator/
 git clone git@github.com:cms-sw/genproductions.git genproductions
-```
 cd genproductions/bin/MadGraph5_aMCatNLO/
+
+```
+
 ./gridpack_generation.sh <name of process card without _proc_card.dat> <folder containing cards relative to current location>
 
 e.g.
