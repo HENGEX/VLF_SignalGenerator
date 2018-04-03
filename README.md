@@ -13,7 +13,7 @@ git@github.com:casfisica/VLF_SignalGenerator.git
 cd VLF_SignalGenerator/
 git clone git@github.com:cms-sw/genproductions.git genproductions
 cd genproductions/bin/MadGraph5_aMCatNLO/
-
+./gridpack_generation.sh model ../../../Model/
 ```
 
 ./gridpack_generation.sh <name of process card without _proc_card.dat> <folder containing cards relative to current location>
