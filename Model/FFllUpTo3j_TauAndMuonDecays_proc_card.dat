@@ -45,8 +45,12 @@ add process p p > fre frebar j, (fre > e2 ss), (frebar > e2bar ss) @1
 add process p p > fre frebar j, (fre > e2 ss), (frebar > e3bar ss) @1
 add process p p > fre frebar j, (fre > e3 ss), (frebar > e2bar ss) @1
 add process p p > fre frebar j, (fre > e3 ss), (frebar > e3bar ss) @1
-add process p p > fre frebar j j, (fre > e2 ss), (frebar > e2bar ss) @2
-add process p p > fre frebar j j, (fre > e2 ss), (frebar > e3bar ss) @2
-add process p p > fre frebar j j, (fre > e3 ss), (frebar > e2bar ss) @2
-add process p p > fre frebar j j, (fre > e3 ss), (frebar > e3bar ss) @2
+add process p p > fre frebar j j, (fre > e2 ss), (frebar > e2bar ss) @\
+2
+add process p p > fre frebar j j, (fre > e2 ss), (frebar > e3bar ss) @\
+2
+add process p p > fre frebar j j, (fre > e3 ss), (frebar > e2bar ss) @\
+2
+add process p p > fre frebar j j, (fre > e3 ss), (frebar > e3bar ss) @\
+2
 output FFllUpTo3j_TauAndMuonDecays -nojpeg
