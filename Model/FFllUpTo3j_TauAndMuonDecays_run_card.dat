@@ -62,10 +62,10 @@
 # PDF choice: this automatically fixes also alpha_s(MZ) and its evol.  *
 #***********************************************************************
  lhapdf = pdlabel ! PDF set
- $DEFAULT_PDF_SETS = lhaid     !# if pdlabel=lhapdf, this is the lhapdf number
- 		     	       !# If pdlabel=lhapdf, this is the lhapdf number. Only 
-              		       !# numbers for central PDF sets are allowed. Can be a list; 
- 			       !# PDF sets beyond the first are included via reweighting.
+ $DEFAULT_PDF_SETS = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
+ 		     	       ! If pdlabel=lhapdf, this is the lhapdf number. Only 
+              		       ! numbers for central PDF sets are allowed. Can be a list; 
+ 			       ! PDF sets beyond the first are included via reweighting.
 #***********************************************************************
 # Include the NLO Monte Carlo subtr. terms for the following parton    *
 # shower (HERWIG6 | HERWIGPP | PYTHIA6Q | PYTHIA6PT | PYTHIA8)         *
@@ -102,7 +102,7 @@
 
  $DEFAULT_PDF_MEMBERS = reweight_PDF     ! reweight to get PDF uncertainty
             ! Reweight to get PDF uncertainty. Should be a
-            ! list booleans of equal length to lhaid to specify for
+            ! list booleans of equal length to #lhaid to specify for
             !  which PDF set to include the uncertainties.
 #***********************************************************************
 # Store reweight information in the LHE file for off-line model-       *
