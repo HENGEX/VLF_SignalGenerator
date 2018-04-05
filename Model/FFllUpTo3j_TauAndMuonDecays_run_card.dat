@@ -102,7 +102,7 @@
 
  $DEFAULT_PDF_MEMBERS = reweight_PDF     ! reweight to get PDF uncertainty
             ! Reweight to get PDF uncertainty. Should be a
-            ! list booleans of equal length to #lhaid to specify for
+            ! list booleans of equal length to  to specify for
             !  which PDF set to include the uncertainties.
 #***********************************************************************
 # Store reweight information in the LHE file for off-line model-       *
