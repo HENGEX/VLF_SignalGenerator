@@ -6,12 +6,22 @@
 ## Quick tutorial on how to produce a gridpack
 <par> The [instal.sh](./install.sh) script is generated automatically with the following commands in this file</par>
 
+<par>
+First you have to copy the local gridpack_generation.sh file to the genproductions/bin/MadGraph5_aMCatNLO
+</par>
+
 <par>We instruct users to clone the whole genproductions from git and work there. On a lxplus machine (not in a release area), you can do the following:</par>
 
 ```bash
 git@github.com:casfisica/VLF_SignalGenerator.git
 cd VLF_SignalGenerator/
 git clone git@github.com:cms-sw/genproductions.git genproductions
+```
+<par>
+First you have to copy the local gridpack_generation.sh file to the genproductions/bin/MadGraph5_aMCatNLO
+</par>
+
+```bash
 cd genproductions/bin/MadGraph5_aMCatNLO/
 ./gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays ../../../Model 
 ```
