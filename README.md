@@ -13,17 +13,19 @@ First you have to copy the local gridpack_generation.sh file to the genproductio
 <par>We instruct users to clone the whole genproductions from git and work there. On a lxplus machine (not in a release area), you can do the following:</par>
 
 ```bash
+PATHCAS="$(pwd)"
 git@github.com:casfisica/VLF_SignalGenerator.git
-cd VLF_SignalGenerator/
-git clone git@github.com:cms-sw/genproductions.git genproductions
+cd PATHCAS/VLF_SignalGenerator/
+#git clone git@github.com:cms-sw/genproductions.git genproductions
+git clone git@github.com:cms-sw/genproductions.git genproductions -b mg26x
 ```
 <par>
-First you have to copy the local gridpack_generation.sh file to the genproductions/bin/MadGraph5_aMCatNLO
+Then you should copy a modyfy 'gridpack_generation.sh' to the 'PATH/genproductions/bin/MadGraph5_aMCatNLO/' folder
 </par>
 
 ```bash
-cd genproductions/bin/MadGraph5_aMCatNLO/
-./gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays ../../../Model 
+cp PATHCAS/VLF_SignalGenerator/gridpack_generation_6_2_x.sh PATHCAS/VLF_SignalGenerator/genproductions/bin/MadGraph5_aMCatNLO/
+PATHCAS/VLF_SignalGenerator/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays PATHCAS/VLF_SignalGenerator/Model 1nd 
 ```
 
 <par>
