@@ -6,7 +6,7 @@
 
 <par> The [instal.sh](./install.sh) script is generated automatically with the following commands in this file </par>
 
-<par> Dowload MadGraph and untar it, then copy the model file (SimplifiedDMSSSFDM) from the Model folder, to the ''MG5_aMC_v2_6_1/models/'' folder, and run the 'FFllUpTo3j_TauAndMuonDecays_proc_card.dat' </par>
+<par> Dowload MadGraph and untar it, then copy the model file (SimplifiedDMSSSFDM) from the Model folder, to the <i>MG5_aMC_v2_6_1/models/</i> folder, and run the 'FFllUpTo3j_TauAndMuonDecays_proc_card.dat' </par>
 
 ```bash
 PATHMG="$(pwd)"
