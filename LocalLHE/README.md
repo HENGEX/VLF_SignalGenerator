@@ -19,4 +19,10 @@ tar -xvf $PATHMG/../Model/SimplifiedDMSSSFDM.tar -C $PATHMG/MG5_aMC_v2_6_1/model
 #run
 $PATHMG/MG5_aMC_v2_6_1/bin/mg5_aMC $PATHMG/../Model/FFllUpTo3j_TauAndMuonDecays_proc_card.dat
 ```
-<par> Now go to the <b>FFllUpTo3j_TauAndMuonDecays</b> folder </par>
+<par> Now go to the <b>FFllUpTo3j_TauAndMuonDecays</b> folder, and copy the cards <b>FFllUpTo3j_TauAndMuonDecays_... </b> to de folder <b>Cards</b>, using the correct names </par>
+
+```bash
+cp $PATHMG/../Model/FFllUpTo3j_TauAndMuonDecays_param_card.dat $PATHMG/FFllUpTo3j_TauAndMuonDecays/Cards/param_card.dat
+cp $PATHMG/../Model/FFllUpTo3j_TauAndMuonDecays_run_card.dat $PATHMG/FFllUpTo3j_TauAndMuonDecays/Cards/run_card.dat
+cp $PATHMG/../Model/FFllUpTo3j_TauAndMuonDecays_me5_configuration.txt $PATHMG/FFllUpTo3j_TauAndMuonDecays/Cards/me5_configuration.txt
+```
