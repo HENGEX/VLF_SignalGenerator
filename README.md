@@ -18,7 +18,7 @@ git clone git@github.com:cms-sw/genproductions.git genproductions -b mg26x
 <par>Then you should copy a modyfy 'gridpack_generation.sh' to the 'PATH/genproductions/bin/MadGraph5_aMCatNLO/' folder</par>
 
 ```bash
-cp $PATHCAS/gridpack_generation_6_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/
+cp $PATHCAS/gridpack_generation_6_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
 $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays $PATHCAS/Model 1nd 
 ```
 
