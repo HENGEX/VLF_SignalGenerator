@@ -9,4 +9,5 @@
 #bash_version    :
 #==============================================================================
 
-python genproductions/bin/MadGraph5_aMCatNLO/Utilities/parsing_code/parsing.py FFllUpTo3j_TauAndMuonDecays Model/ 
+python genproductions/bin/MadGraph5_aMCatNLO/Utilities/parsing_code/parsing.py Model/FFllUpTo3j_TauAndMuonDecays 1nd
+
