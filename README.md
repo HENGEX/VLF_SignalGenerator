@@ -6,19 +6,25 @@
 ## Quick tutorial on how to produce a gridpack
 <par> The [instal.sh](./install.sh) script is generated automatically with the following commands in this file </par>
 
+```bash
+git clone git@github.com:casfisica/VLF_SignalGenerator.git
+cd VLF_SignalGenerator
+```
+
 <par>First you have to copy the local gridpack_generation.sh file to the genproductions/bin/MadGraph5_aMCatNLO</par>
 
 <par> We instruct users to clone the whole genproductions from git and work there. On a lxplus machine (not in a release area), you can do the following:</par>
 
 ```bash
 PATHCAS="$(pwd)"
-#git clone git@github.com:cms-sw/genproductions.git genproductions
-git clone git@github.com:cms-sw/genproductions.git genproductions -b mg26x
+git clone git@github.com:cms-sw/genproductions.git genproductions
+#git clone git@github.com:cms-sw/genproductions.git genproductions -b mg26x
 ```
 <par>Then you should copy a modyfy 'gridpack_generation.sh' to the 'PATH/genproductions/bin/MadGraph5_aMCatNLO/' folder</par>
 
 ```bash
-cp $PATHCAS/gridpack_generation_6_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
+#cp $PATHCAS/gridpack_generation_6_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
+cp $PATHCAS/gridpack_generation_4_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
 cd /genproductions/bin/MadGraph5_aMCatNLO/
 ./gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays ../../../Model/ 1nd &
 ```
