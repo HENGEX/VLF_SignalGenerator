@@ -25,7 +25,7 @@ git clone git@github.com:cms-sw/genproductions.git genproductions
 ```bash
 #cp $PATHCAS/gridpack_generation_6_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
 cp $PATHCAS/gridpack_generation_4_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
-cd /genproductions/bin/MadGraph5_aMCatNLO/
+cd $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/
 ./gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays ../../../Model/ 1nd &
 ```
 
