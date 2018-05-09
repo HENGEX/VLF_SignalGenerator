@@ -11,7 +11,35 @@ git clone git@github.com:casfisica/VLF_SignalGenerator.git
 cd VLF_SignalGenerator
 ```
 
-<par>First you have to copy the local gridpack_generation.sh file to the genproductions/bin/MadGraph5_aMCatNLO</par>
+<par>First you have to use your own version of gcc compilers [MyOwnVersionOfGCC_LXPLUS](https://github.com/casfisica/MyOwnVersionOfGCC_LXPLUS.git)</par>
+
+```bash
+wget http://gfortran.meteodat.ch/download/x86_64/snapshots/gcc-4.9-20160803.tar.xz
+tar xvf gcc-4.9-20160803.tar.xz
+NEWFORTRANPATH="$(pwd)"
+
+cat <<EOT >> CONFIGNEWFORTRAN.sh 
+#!/bin/sh
+
+export PATH=$NEWFORTRANPATH/gcc-4.9/bin:$PATH
+
+if [ -z "$LD_LIBRARY_PATH" ]; then
+    LD_LIBRARY_PATH="$NEWFORTRANPATH/gcc-4.9/lib64"
+  else
+    LD_LIBRARY_PATH="$NEWFORTRANPATH/gcc-4.9/lib64:$LD_LIBRARY_PATH"
+  fi
+  export LD_LIBRARY_PATH
+EOT
+```
+<par>And when you want to use it, just source the config script, every time you logout</par>
+
+
+```bash
+source PATH_TO_THE_FORTRAN_FOLDE/CONFIGNEWFORTRAN.sh 
+
+```
+
+<par>then you have to copy the local gridpack_generation.sh file to the genproductions/bin/MadGraph5_aMCatNLO</par>
 
 <par> We instruct users to clone the whole genproductions from git and work there. On a lxplus machine (not in a release area), you can do the following:</par>
 
