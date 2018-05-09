@@ -25,7 +25,6 @@ git clone git@github.com:cms-sw/genproductions.git genproductions
 ```bash
 #cp $PATHCAS/gridpack_generation_6_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
 cp $PATHCAS/gridpack_generation_4_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
-cp $PATHCAS/0020-problem-with-DCMPLX-fortran.patch $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/patches/0020-problem-with-DCMPLX-fortran.patch
 cd $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/
 ./gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays ../../../Model/ local &
 ```
