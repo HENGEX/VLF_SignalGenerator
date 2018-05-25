@@ -13,7 +13,7 @@ PATHMG="$(pwd)"
 #download MadGraph
 wget https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.2.tar.gz
 # untar
-tar -xvf MG5_aMC_v2.6.1.tar.gz
+tar -xvf MG5_aMC_v2.6.2.tar.gz
 #copy the model
 tar -xvf $PATHMG/../Model/SimplifiedDMSSSFDM.tar -C $PATHMG/MG5_aMC_v2_6_1/models/
 #run
