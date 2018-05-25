@@ -15,9 +15,9 @@ wget https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.2.tar.gz
 # untar
 tar -xvf MG5_aMC_v2.6.2.tar.gz
 #copy the model
-tar -xvf $PATHMG/../Model/SimplifiedDMSSSFDM.tar -C $PATHMG/MG5_aMC_v2_6_1/models/
+tar -xvf $PATHMG/../Model/SimplifiedDMSSSFDM.tar -C $PATHMG/MG5_aMC_v2_6_2/models/
 #run
-$PATHMG/MG5_aMC_v2_6_1/bin/mg5_aMC $PATHMG/../Model/FFllUpTo3j_TauAndMuonDecays_proc_card.dat
+$PATHMG/MG5_aMC_v2_6_2/bin/mg5_aMC $PATHMG/../Model/FFllUpTo3j_TauAndMuonDecays_proc_card.dat
 ```
 <par> Now go to the <b>FFllUpTo3j_TauAndMuonDecays</b> folder, and copy the cards <b>FFllUpTo3j_TauAndMuonDecays_... </b> to de folder <b>Cards</b>, using the correct names </par>
 
