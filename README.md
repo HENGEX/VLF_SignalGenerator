@@ -74,6 +74,9 @@ tail -f FFllUpTo3j_TauAndMuonDecays.log
 
 ### Troubleshoot: 
 <par><i>[1]</i> When we are producing events, the error:</par>
+
 <par>        Warning: No element <mgrwt> in event</par>
+    
 <par>        ./runcmsgrid.sh: line 235:  9687 Segmentation fault      (core dumped)</par>
+
 <par>    is produced by the option pdfwgt=true. in the run_car.dat, and is fixed by changed it to false pdfwgt=false </par>
