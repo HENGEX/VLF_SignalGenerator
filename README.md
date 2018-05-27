@@ -66,6 +66,7 @@ eval "cat gridpack_generation.sh  | sed '/wget --no-check-certificate https/c\  
 <par>Then to see the progres</par>
 
 ```bash
+sleep 20
 tail -f FFllUpTo3j_TauAndMuonDecays.log 
 ```
 
