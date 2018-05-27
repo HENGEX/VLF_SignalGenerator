@@ -74,7 +74,7 @@ tail -f FFllUpTo3j_TauAndMuonDecays.log
     In this example, as you see from the last line, we are launching the jobs onto the 1nd queue (CPU limit one day). For complicated processes (e.g. W+jets), please consider using a queue with a longer CPU limit (e.g. 1nw, which has a CPU limit of one week). The queue parameter is optional, if it is not provided, then all jobs run locally (multicore). for more information go  [twiki](https://twiki.cern.ch/twiki/bin/viewauth/CMS/QuickGuideMadGraph5aMCatNLO) </par>
 
 ### Troubleshoot: 
-<par><i>[1]</i> When we are producing events, the error:
+<par><i>[1]</i> When we are producing events, the error:<br>
         Warning: No element <mgrwt> in event<br>
         ./runcmsgrid.sh: line 235:  9687 Segmentation fault      (core dumped)<br>
     is produced by the option pdfwgt=true. in the run_car.dat, and is fixed by changed it to false pdfwgt=false </par>
