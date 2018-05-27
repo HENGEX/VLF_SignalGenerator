@@ -18,7 +18,7 @@
 #  
 # in case of problems send email to florian.staub@cern.ch and goodsell@lpthe.jussieu.fr 
 # ----------------------------------------------------------------------
-# Created: 29.10.2017,  18:36
+# Created: 18.11.2017,  19:24
 Block SPINFO         # Program information
      1   SPhenoSARAH      # spectrum calculator
      2   v3.3.8      # version number of SPheno
@@ -31,8 +31,8 @@ Block MINPAR  # Input parameters
     1    2.55000000E-01  # Lambda1IN
     2    0.00000000E+00  # LamSHIN
     3    1.00000000E-01  # LamSIN
-    4    6.40000000E+03  # MS2Input
-    5    1.00000000E+02  # MSFIN
+    4    3.80250000E+04  # MS2Input
+    5    2.00000000E+02  # MSFIN
 Block gaugeGUT Q= -1.00000000E+00  # (GUT scale)
    1    0.00000000E+00  # g1(Q)^DRbar
    2    0.00000000E+00  # g2(Q)^DRbar
@@ -51,12 +51,12 @@ Block GAUGE Q=  1.60000000E+02  # (Renormalization Scale)
 Block HDM Q=  1.60000000E+02  # (Renormalization Scale)
    3    1.00000000E-01  # LS
    2    0.00000000E+00  # LSH
-   1    1.00000000E+02  # MFS
+   1    2.00000000E+02  # MFS
 Block SM Q=  1.60000000E+02  # (Renormalization Scale)
    2    2.55000000E-01  # Lam
    1   -7.72963250E+03  # Mu
 Block MSOFT Q=  1.60000000E+02  # (Renormalization Scale)
-  22    6.40000000E+03  # MS2
+  22    3.80250000E+04  # MS2
 Block HMIX Q=  1.60000000E+02  # (Renormalization Scale)
    3    2.46220569E+02  # v
 Block TREESM Q=  1.60000000E+02  # (Renormalization Scale)
@@ -100,7 +100,7 @@ Block Ye Q=  1.60000000E+02  # (Renormalization Scale)
 Block MASS  # Mass spectrum
 #   PDG code      mass          particle
         25     1.24335293E+02  # hh
-   6666635     8.00000000E+01  # ss
+   6666635     1.95000000E+02  # ss
         23     9.11887000E+01  # VZ
         24     8.03497269E+01  # VWp
          1     5.00000000E-03  # Fd_1
@@ -115,7 +115,7 @@ Block MASS  # Mass spectrum
         12     0.00000000E+00  # Fv_1
         14     0.00000000E+00  # Fv_2
         16     0.00000000E+00  # Fv_3
-   6000061     1.00000000E+02  # Fre
+   6000061     2.00000000E+02  # Fre
 Block UVMIX Q=  1.60000000E+02  # ()
   1  1     1.00000000E+00   # Real(UV(1,1),dp)
   1  2     0.00000000E+00   # Real(UV(1,2),dp)
@@ -214,7 +214,7 @@ Block EFFHIGGSCOUPLINGS # values of loop-induced couplings
         25           22           23     0.00000000E+00 # H-Photon-Z (not yet calculated by SPheno) 
 Block SPhenoLowEnergy # low energy observables 
       20    2.18103453E-23  # (g-2)_e
-      21    6.73268691E-12  # (g-2)_mu
+      21    1.47635262E-12  # (g-2)_mu
       22    9.89019372E-10  # (g-2)_tau
       23    0.00000000E+00  # EDM(e)
       24    0.00000000E+00  # EDM(mu)
@@ -631,6 +631,6 @@ DECAY        25     3.78348685E-03   # hh
      2.35019930E-04    2          -13         13   # BR(hh -> Fe_2^* Fe_2 )
      6.78378601E-02    2          -15         15   # BR(hh -> Fe_3^* Fe_3 )
      2.76075557E-02    2           -4          4   # BR(hh -> Fu_2^* Fu_2 )
-DECAY   6000061     1.28914082E-03   # Fre
+DECAY   6000061     4.84897353E-05   # Fre
 #    BR                NDA      ID1      ID2
      1.00000000E+00    2           13    6666635   # BR(Fre -> Fe_2 ss )
