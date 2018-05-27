@@ -6,11 +6,6 @@
 ## Quick tutorial on how to produce a gridpack
 <par> The [instal.sh](./install.sh) script is generated automatically with the following commands in this file </par>
 
-```bash
-git clone git@github.com:casfisica/VLF_SignalGenerator.git
-cd VLF_SignalGenerator
-```
-
 <par>First you have to use your own version of gcc compilers [MyOwnVersionOfGCC_LXPLUS](https://github.com/casfisica/MyOwnVersionOfGCC_LXPLUS.git)</par>
 
 ```bash
