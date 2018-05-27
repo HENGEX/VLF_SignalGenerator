@@ -48,7 +48,7 @@ git clone git@github.com:cms-sw/genproductions.git genproductions
 
 ```bash
 cd $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/
-eval "cat gridpack_generation.sh  | sed '/wget --no-check-certificate https/c\            cp $PATHCAS\/Model\/\$model .\/'> gridpack_generation.sh "
+eval "sed -i '/wget --no-verbose --no-check-certificate https/c\            cp $PATHCAS\/Model\/\$model .\/' gridpack_generation.sh"
 
 ```
 <par>To run just </par>
