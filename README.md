@@ -42,7 +42,9 @@ source ./CONFIGNEWFORTRAN.sh
 ```bash
 PATHCAS="$(pwd)"
 git clone git@github.com:cms-sw/genproductions.git genproductions
-#git clone git@github.com:cms-sw/genproductions.git genproductions -b mg26x
+#Patching the fortran compile problem
+cp $PATHCAS/0020-multiple-try-compilation.patch genproductions/bin/MadGraph5_aMCatNLO/patches/
+
 ```
 <par>Then you modify  de 'gridpack_generation.sh' to the 'PATH/genproductions/bin/MadGraph5_aMCatNLO/' folder</par>
 
