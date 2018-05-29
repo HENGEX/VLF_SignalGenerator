@@ -41,7 +41,9 @@ source ./CONFIGNEWFORTRAN.sh
 
 ```bash
 PATHCAS="$(pwd)"
-git clone git@github.com:cms-sw/genproductions.git genproductions
+#git clone git@github.com:cms-sw/genproductions.git genproductions
+#Using my own Fork
+git clone git@github.com:casfisica/genproductions.git genproductions
 #Patching the fortran compile problem
 cp $PATHCAS/0020-multiple-try-compilation.patch genproductions/bin/MadGraph5_aMCatNLO/patches/
 
