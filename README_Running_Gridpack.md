@@ -14,7 +14,8 @@ work subdirectory and launch the runcmsgrid.sh command from there
 
 ```bash
 cd <NameOfYoursCarsd/NameOfYoursCarsd_gridpack>/work/
-./runcmsgrid.sh <NEvents> <RandomSeed> <NumberOfCPUs>
+./runcmsgrid.sh <NEvents> <RandomSeed> <NumberOfCPUs> &> event_generation.log &
+tail -f event_generation.log
 ```
 ## You want to test the gridpack.tar.xz
 <par>
@@ -29,7 +30,8 @@ cd CMSSW_X_Y_Z/src
 cmsenv
 tar -xavf <PathOfGridpack>/NameOfYoursCarsd_gridpack_tarball.tar.xz
 bash
-./runcmsgrid.sh <NEvents> <RandomSeed> <NumberOfCPUs>
+./runcmsgrid.sh <NEvents> <RandomSeed> <NumberOfCPUs> &> event_generation.log &
+tail -f event_generation.log
 
 ```
 <par>
@@ -43,5 +45,5 @@ Then you can compress it
 </par>
 
 ```bash
-gzip -9 cms_final.lhe
+gzip -9 cmsgrid_final.lhe
 ```
