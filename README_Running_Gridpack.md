@@ -13,8 +13,8 @@ work subdirectory and launch the runcmsgrid.sh command from there
 </par>
 
 ```bash
-cd FFllUpTo3j_TauAndMuonDecays/FFllUpTo3j_TauAndMuonDecays_gridpack/work/
-
+cd <NameOfYoursCarsd/NameOfYoursCarsd_gridpack>/work/
+./runcmsgrid.sh <NEvents> <RandomSeed> <NumberOfCPUs>
 ```
 ## You want to test the gridpack.tar.xz
 <par>
@@ -27,7 +27,7 @@ unpack it and run:
 cmsrel CMSSW_X_Y_Z 
 cd CMSSW_X_Y_Z/src
 cmsenv
-tar -xavf <path of gridpack creation>/wplustest_LO_tarball.tar.xz
+tar -xavf <PathOfGridpack>/NameOfYoursCarsd_gridpack_tarball.tar.xz
 bash
 ./runcmsgrid.sh <NEvents> <RandomSeed> <NumberOfCPUs>
 
@@ -36,5 +36,12 @@ bash
 The <i>runcmsgrid.sh</i> script requires 3 parameters: the first one is the number of events to be generated, 
 the second one is a random seed and the third one is the number of CPUs. 
 Again, things work precisely alike for the NLO case.
-
 </par>
+
+<par>
+Then you can compress it
+</par>
+
+```bash
+gzip -9 cms_final.lhe
+```
