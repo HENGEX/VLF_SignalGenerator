@@ -6,11 +6,6 @@
 ## Quick tutorial on how to produce a gridpack
 <!---<par> The [instal.sh](./install.sh) script is generated automatically with the following commands in this file </par>--->
 
-```bash
-git clone git@github.com:casfisica/VLF_SignalGenerator.git
-cd VLF_SignalGenerator
-```
-
 <par>First you have to use your own version of gcc compilers [MyOwnVersionOfGCC_LXPLUS](https://github.com/casfisica/MyOwnVersionOfGCC_LXPLUS.git)</par>
 
 ```bash
@@ -35,7 +30,8 @@ EOT
 
 
 ```bash
-source PATH_TO_THE_FORTRAN_FOLDE/CONFIGNEWFORTRAN.sh 
+#source PATH_TO_THE_FORTRAN_FOLDE/CONFIGNEWFORTRAN.sh 
+source ./CONFIGNEWFORTRAN.sh 
 
 ```
 
@@ -45,22 +41,41 @@ source PATH_TO_THE_FORTRAN_FOLDE/CONFIGNEWFORTRAN.sh
 
 ```bash
 PATHCAS="$(pwd)"
-git clone git@github.com:cms-sw/genproductions.git genproductions
-#git clone git@github.com:cms-sw/genproductions.git genproductions -b mg26x
+#git clone git@github.com:cms-sw/genproductions.git genproductions
+#Using my own Fork
+git clone git@github.com:casfisica/genproductions.git genproductions
+#Patching the fortran compile problem
+cp $PATHCAS/0020-multiple-try-compilation.patch genproductions/bin/MadGraph5_aMCatNLO/patches/
+
 ```
-<par>Then you should copy a modyfy 'gridpack_generation.sh' to the 'PATH/genproductions/bin/MadGraph5_aMCatNLO/' folder</par>
+<par>Then you modify  de 'gridpack_generation.sh' to the 'PATH/genproductions/bin/MadGraph5_aMCatNLO/' folder</par>
 
 ```bash
-#cp $PATHCAS/gridpack_generation_6_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
-cp $PATHCAS/gridpack_generation_4_2_x.sh $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/gridpack_generation.sh
 cd $PATHCAS/genproductions/bin/MadGraph5_aMCatNLO/
+eval "sed -i '/wget --no-verbose --no-check-certificate https/c\            cp $PATHCAS\/Model\/\$model .\/' gridpack_generation.sh"
+
+```
+<par>To run just </par>
+    
+```bash
 ./gridpack_generation.sh FFllUpTo3j_TauAndMuonDecays ../../../Model/ local &
+
 ```
 
-<par>To see the progres</par>
+<par>Then to see the progres</par>
 
 ```bash
+sleep 20
 tail -f FFllUpTo3j_TauAndMuonDecays.log 
 ```
 
-<par> Note: the output directory specified in the *_proc_card.dat should match the name of the process as used in the gridpack_generation.sh script. In this example, as you see from the last line, we are launching the jobs onto the 1nd queue (CPU limit one day). For complicated processes (e.g. W+jets), please consider using a queue with a longer CPU limit (e.g. 1nw, which has a CPU limit of one week). The queue parameter is optional, if it is not provided, then all jobs run locally (multicore). for more information go  [twiki](https://twiki.cern.ch/twiki/bin/viewauth/CMS/QuickGuideMadGraph5aMCatNLO) </par>
+
+<par> Note: the output directory specified in the *_proc_card.dat should match the name of the process as used in the gridpack_generation.sh script. <br>
+    In this example, as you see from the last line, we are launching the jobs onto the 1nd queue (CPU limit one day). For complicated processes (e.g. W+jets), please consider using a queue with a longer CPU limit (e.g. 1nw, which has a CPU limit of one week). The queue parameter is optional, if it is not provided, then all jobs run locally (multicore). for more information go  [twiki](https://twiki.cern.ch/twiki/bin/viewauth/CMS/QuickGuideMadGraph5aMCatNLO) </par>
+
+### Troubleshoot: 
+<pre><i>[1]</i> When we are producing events, the error:
+        Warning: No element <mgrwt> in event
+        ./runcmsgrid.sh: line 235:  9687 Segmentation fault      (core dumped)
+    is produced by the option <i>pdfwgt = True.</i> in the <b>run_car.dat</b>, and 
+    it is fixed by changed it to false <i>pdfwgt = False</i> </pre>
